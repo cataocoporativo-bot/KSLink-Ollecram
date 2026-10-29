@@ -1,0 +1,16 @@
+{
+  "_comentario": "Identidade padrão do KSLink (cyberpunk + logotipo da Klaatu Systems). Copie para ../brand.json e rode: node tools/apply-brand.mjs",
+  "style": "cyberpunk",
+  "themeColor": "#05030a",
+  "colors": {
+    "bg": "#05030a", "surface": "#0b0814", "surface2": "#130d22", "border": "#2b1d4a",
+    "accent": "#00f0ff", "accent2": "#ff2a6d", "violet": "#b026ff", "danger": "#ff3b5c", "warn": "#fcee0a",
+    "text": "#e9f6ff", "muted": "#8a84b0", "onAccent": "#021014", "accentHover": "#5ff7ff", "inputBg": "#04020a"
+  },
+  "fonts": { "ui": null, "display": null, "mono": null, "faces": [] },
+  "logos": {
+    "header": { "file": "klaatu-logo.png", "alt": "Klaatu Systems", "label": "by" },
+    "foot":   { "file": "klaatu-logo.png", "alt": "Klaatu Systems" },
+    "empty":  { "file": "klaatu-logo.png", "alt": "Klaatu Systems" }
+  }
+}

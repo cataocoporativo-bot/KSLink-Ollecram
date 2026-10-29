@@ -1,0 +1,20 @@
+{
+  "name": "kslink",
+  "version": "2.0.0",
+  "description": "KSLink — chat em grupo P2P com criptografia ponta a ponta e sinalização mínima",
+  "private": true,
+  "type": "module",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "test": "node --test test/crypto.test.js test/server.test.js",
+    "test:e2e": "node test/e2e.mjs",
+    "brand": "node tools/apply-brand.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "ws": "^8.18.0"
+  }
+}

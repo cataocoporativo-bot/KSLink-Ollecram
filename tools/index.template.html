@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="{{THEME_COLOR}}">
+<meta name="referrer" content="no-referrer">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<title>KSLink</title>
+<link rel="icon" href="icon.png" type="image/png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="brand.css">
+<script type="module" src="app.js"></script>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <span class="logo-text">KS<span>LINK</span></span>
+    {{LOGO_HEADER}}
+  </div>
+  <div class="header-right">
+    <div class="status-bar">
+      <div class="dot" id="netDot"></div>
+      <span id="netTxt">Offline</span>
+    </div>
+    <button class="menu-btn" id="menuBtn" type="button" aria-label="Abrir menu">☰</button>
+  </div>
+</header>
+
+<div class="drawer-overlay" id="overlay"></div>
+
+<main>
+  <!-- ═════════ PAINEL LATERAL ═════════ -->
+  <aside class="sidebar" id="sidebar">
+
+    <div class="side-head">
+      <span class="sec-label">Conexão</span>
+      <button class="close-btn" id="closeBtn" type="button" aria-label="Fechar menu">✕</button>
+    </div>
+
+    <div class="sec">
+      <label class="sec-label" for="nameInput">Seu nome</label>
+      <input type="text" id="nameInput" maxlength="24" autocomplete="off" spellcheck="false" placeholder="Seu nome">
+    </div>
+
+    <div class="sec" id="roomIdle">
+      <button class="btn pri" id="btnCreate" type="button">⚡ Criar sala</button>
+      <div class="divider">ou</div>
+      <input type="text" id="roomInput" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Código ou link da sala">
+      <button class="btn sec2" id="btnJoin" type="button">📡 Entrar na sala</button>
+    </div>
+
+    <div class="sec hidden" id="roomActive">
+      <label class="sec-label" for="roomLink">Link da sala</label>
+      <input type="text" id="roomLink" readonly>
+      <button class="btn" id="btnCopyLink" type="button">📋 Copiar link</button>
+      <button class="btn danger" id="btnLeave" type="button">🚪 Sair da sala</button>
+    </div>
+
+    <div class="sec">
+      <div class="sec-label">Participantes <span id="peerCount"></span></div>
+      <ul class="peers" id="peerList"></ul>
+    </div>
+
+    <details class="sec adv">
+      <summary>Identidade e servidor</summary>
+      <div class="adv-body">
+        <div class="sec-label">Sua impressão digital</div>
+        <div class="fp-line">
+          <code id="myFp">—</code>
+          <button class="mini-btn" id="btnCopyFp" type="button" title="Copiar impressão digital completa">📋</button>
+        </div>
+
+        <label class="sec-label" for="bkPass">Backup da identidade</label>
+        <input type="password" id="bkPass" autocomplete="new-password" placeholder="Senha do backup (mín. 8)">
+        <button class="btn" id="btnExport" type="button">💾 Exportar backup</button>
+        <button class="btn" id="btnImport" type="button">📂 Importar backup</button>
+        <input type="file" id="fileImport" class="hidden" accept="application/json,.json">
+
+        <label class="sec-label" for="serverInput">Servidor de sinalização</label>
+        <input type="text" id="serverInput" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Este site (padrão)">
+        <button class="btn" id="btnSaveServer" type="button">✅ Salvar servidor</button>
+      </div>
+    </details>
+
+    {{LOGO_FOOT}}
+
+  </aside>
+
+  <!-- ═════════ CHAT ═════════ -->
+  <section class="chat">
+    <div class="chat-hdr">
+      <div class="peer-row">
+        <div class="avatar">🔐</div>
+        <div class="peer-meta">
+          <div class="peer-name" id="chatTitle">Nenhuma sala</div>
+          <div class="peer-sub" id="chatSub">Crie ou entre em uma sala</div>
+        </div>
+      </div>
+      <button class="snd-btn" id="soundBtn" type="button" aria-label="Som de notificação" title="Som de notificação"></button>
+      <div class="e2ee-badge" id="e2eeBadge">🔒 <span class="badge-txt">E2EE inativo</span></div>
+    </div>
+
+    <div class="messages" id="msgs">
+      <div class="empty" id="emptyState">
+        {{LOGO_EMPTY}}
+        <div class="empty-title">Chat em grupo P2P</div>
+        <div>Mensagens e arquivos vão direto entre os participantes, cifrados de ponta a ponta.</div>
+      </div>
+    </div>
+
+    <div class="reply-bar hidden" id="replyBar">
+      <div class="reply-txt"><div class="reply-who" id="replyWho"></div><div class="reply-body" id="replyBody"></div></div>
+      <button type="button" id="replyCancel" aria-label="Cancelar resposta">✕</button>
+    </div>
+
+    <div class="input-area">
+      <input type="file" id="fileInput" class="hidden">
+      <button class="attach-btn" id="attachBtn" type="button" disabled aria-label="Enviar arquivo">📎</button>
+      <textarea id="msgInput" rows="1" maxlength="4000" placeholder="Mensagem cifrada…" disabled></textarea>
+      <button class="send-btn" id="sendBtn" type="button" disabled aria-label="Enviar">➤</button>
+    </div>
+  </section>
+</main>
+
+<div class="toast hidden" id="toast" role="status"></div>
+
+</body>
+</html>

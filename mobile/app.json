@@ -1,0 +1,30 @@
+{
+  "expo": {
+    "name": "KSLink",
+    "slug": "kslink",
+    "version": "2.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "backgroundColor": "#05030a",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "backgroundColor": "#05030a",
+      "resizeMode": "contain"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.kslink.app"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#05030a"
+      },
+      "package": "com.kslink.app"
+    },
+    "extra": {
+      "serverUrl": ""
+    }
+  }
+}

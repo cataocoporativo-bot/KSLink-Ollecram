@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'">
+<title>KSLink — Servidor</title>
+<link rel="stylesheet" href="setup.css">
+<script src="setup.js" defer></script>
+</head>
+<body>
+  <main class="card">
+    <img class="logo" src="klaatu-logo.png" alt="Klaatu Systems">
+    <h1>KSLINK</h1>
+    <p id="erro" class="erro" hidden></p>
+    <label for="srv">Endereço do servidor</label>
+    <input id="srv" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="https://kslink.onrender.com">
+    <button id="salvar" type="button">Conectar</button>
+    <p id="msg" class="msg" hidden></p>
+  </main>
+</body>
+</html>

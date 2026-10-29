@@ -1,0 +1,8 @@
+Os ícones já estão prontos (gerados a partir do logotipo da Klaatu Systems):
+
+  icon.ico   → Windows  (multi-tamanho, até 256x256)
+  icon.icns  → macOS    (1024x1024)
+  icon.png   → Linux    (512x512)
+
+Para trocar, substitua os arquivos mantendo os mesmos nomes
+(o .ico precisa ter pelo menos 256x256).

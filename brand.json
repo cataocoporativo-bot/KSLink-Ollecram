@@ -1,0 +1,62 @@
+{
+  "_comentario": "Identidade da Ollecram Partners, extraída do logotipo (azul-aço metálico e azul-marinho). Tipografia Montserrat, próxima do nome do logotipo.",
+  "style": "corporate",
+  "themeColor": "#ffffff",
+  "colors": {
+    "bg": "#f2f5fa",
+    "surface": "#ffffff",
+    "surface2": "#edf1f8",
+    "border": "#d3dbe8",
+    "accent": "#2c4a7c",
+    "accent2": "#5b78a8",
+    "violet": "#93aed9",
+    "danger": "#c0392b",
+    "warn": "#b7791f",
+    "text": "#0b1f3f",
+    "muted": "#5b6b85",
+    "onAccent": "#ffffff",
+    "accentHover": "#1f3a66",
+    "inputBg": "#ffffff"
+  },
+  "fonts": {
+    "ui": "'Montserrat', system-ui, sans-serif",
+    "display": "'Montserrat', system-ui, sans-serif",
+    "mono": null,
+    "faces": [
+      {
+        "family": "Montserrat",
+        "weight": 500,
+        "file": "montserrat-latin-500-normal.woff2"
+      },
+      {
+        "family": "Montserrat",
+        "weight": 600,
+        "file": "montserrat-latin-600-normal.woff2"
+      },
+      {
+        "family": "Montserrat",
+        "weight": 700,
+        "file": "montserrat-latin-700-normal.woff2"
+      }
+    ]
+  },
+  "logos": {
+    "header": {
+      "file": "ollecram-mark.png",
+      "alt": "Ollecram Partners"
+    },
+    "foot": {
+      "file": "ollecram-logo.png",
+      "alt": "Ollecram Partners"
+    },
+    "empty": {
+      "file": "ollecram-logo.png",
+      "alt": "Ollecram Partners"
+    },
+    "credit": {
+      "file": "klaatu-logo-azul.png",
+      "alt": "Klaatu Systems",
+      "label": "by"
+    }
+  }
+}

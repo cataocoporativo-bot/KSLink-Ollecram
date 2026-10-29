@@ -1,0 +1,90 @@
+{
+  "name": "kslink-desktop",
+  "version": "2.0.0",
+  "description": "KSLink — chat em grupo P2P com criptografia ponta a ponta (cliente desktop)",
+  "main": "main.js",
+  "author": "KSLink",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "build:win": "electron-builder --win",
+    "build:mac": "electron-builder --mac",
+    "build:linux": "electron-builder --linux",
+    "build:all": "electron-builder -mwl"
+  },
+  "devDependencies": {
+    "electron": "^31.0.0",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.kslink.app",
+    "productName": "KSLink",
+    "copyright": "Copyright © 2026 KSLink",
+    "artifactName": "KSLink-${version}-${arch}.${ext}",
+    "files": [
+      "main.js",
+      "preload.js",
+      "config.json",
+      "src/**/*",
+      "assets/**/*"
+    ],
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "assets/icon.ico"
+    },
+    "mac": {
+      "target": [
+        {
+          "target": "dmg",
+          "arch": [
+            "x64",
+            "arm64"
+          ]
+        }
+      ],
+      "icon": "assets/icon.icns",
+      "category": "public.app-category.utilities"
+    },
+    "linux": {
+      "target": [
+        {
+          "target": "AppImage",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "assets/icon.png",
+      "category": "Network"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "installerIcon": "assets/icon.ico",
+      "uninstallerIcon": "assets/icon.ico",
+      "perMachine": false,
+      "allowElevation": false
+    },
+    "portable": {
+      "artifactName": "KSLink-${version}-portatil.${ext}"
+    }
+  }
+}

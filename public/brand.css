@@ -1,0 +1,49 @@
+/* GERADO por tools/apply-brand.mjs a partir de brand.json — não edite à mão. */
+@font-face { font-family: 'Montserrat'; font-weight: 500; font-style: normal; font-display: swap; src: url('fonts/montserrat-latin-500-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Montserrat'; font-weight: 600; font-style: normal; font-display: swap; src: url('fonts/montserrat-latin-600-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Montserrat'; font-weight: 700; font-style: normal; font-display: swap; src: url('fonts/montserrat-latin-700-normal.woff2') format('woff2'); }
+:root {
+  --bg: #f2f5fa;
+  --surface: #ffffff;
+  --surface2: #edf1f8;
+  --border: #d3dbe8;
+  --accent: #2c4a7c;
+  --accent2: #5b78a8;
+  --violet: #93aed9;
+  --danger: #c0392b;
+  --warn: #b7791f;
+  --text: #0b1f3f;
+  --muted: #5b6b85;
+  --on-accent: #ffffff;
+  --accent-hover: #1f3a66;
+  --input-bg: #ffffff;
+  --bg-rgb: 242, 245, 250;
+  --surface-rgb: 255, 255, 255;
+  --accent-rgb: 44, 74, 124;
+  --accent2-rgb: 91, 120, 168;
+  --violet-rgb: 147, 174, 217;
+  --danger-rgb: 192, 57, 43;
+  --text-rgb: 11, 31, 63;
+  --ui: 'Montserrat', system-ui, sans-serif;
+  --display: 'Montserrat', system-ui, sans-serif;
+}
+
+/* estilo corporativo: sem grade, linhas de varredura, glitch, brilho neon nem cantos chanfrados */
+body::before, body::after { display: none; }
+body { background: var(--bg); }
+* { clip-path: none !important; }
+:root { --glow: none; --glow2: none; --cut: 0px; }
+.logo-text { animation: none; text-shadow: none; letter-spacing: 0.04em; }
+header::after { box-shadow: none; }
+.btn, input[type='text'], input[type='password'], #msgInput, .bubble, .file-bubble, .peer, .e2ee-badge, .quote, .mini-btn, .send-btn, .attach-btn, .snd-btn { border-radius: 8px; }
+.btn.pri:hover { filter: none; }
+.dot { transform: none; border-radius: 50%; }
+.brand-foot > img { width: 50%; max-width: 150px; opacity: 1; }
+.empty-logo { filter: none; animation: none; }
+.empty-title { text-shadow: none; letter-spacing: 0.04em; }
+.sidebar { box-shadow: none; }
+.sidebar.open { box-shadow: 4px 0 24px rgba(0, 0, 0, 0.18); }
+.drawer-overlay { background: rgba(20, 30, 40, 0.35); }
+.dot.on, .dot.connecting { box-shadow: none; }
+.e2ee-badge.active { text-shadow: none; }
+.sec-label, .peer-name, .logo-text, .adv summary { text-transform: none; }
